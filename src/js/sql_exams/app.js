@@ -1,26 +1,46 @@
 import { list } from './list_exams';
 import { exam } from './exam';
 import { render } from 'lit-html';
+import { question } from './question';
+
+import * as acemodule from 'ace-builds/src-noconflict/ace';
+import 'ace-builds/src-noconflict/mode-sql';
+import 'ace-builds/src-noconflict/theme-dracula';
 
 const rootDiv = document.getElementById('root');
 
 const routes = {
-	'/sql_exams/': list,
-	'/sql_exams/exam': exam,
+	'': list,
+	'#/exam': exam,
+	'#/exam/question': question,
 };
 
-const onNavigate = (pathname) => {
-	window.history.pushState({}, pathname, window.location.origin + pathname);
-	render(routes[pathname], rootDiv);
+const onNavigate = (hash) => {
+	window.history.pushState({}, hash, window.location.origin + '/sql_exams/' + hash);
+	render(routes[hash], rootDiv);
+	onRender();
+};
+
+const onRender = () => {
+	ace.edit('editor', {
+		mode: 'ace/mode/sql',
+		theme: 'ace/theme/dracula',
+		maxLines: 50,
+		minLines: 10,
+		fontSize: 18,
+	});
+	var quill = new Quill('#rich-text-editor', {
+		theme: 'snow',
+	});
+};
+window.onpopstate = () => {
+	render(routes[window.location.hash], rootDiv);
+	onRender();
 };
 
 window['onNavigate'] = onNavigate;
 
-window.onpopstate = () => {
-	render(routes[window.location.pathname], rootDiv);
-};
-
 // Default Page Load
-console.log(window.location.pathname);
+console.log(window.location.hash);
 
-render(routes[window.location.pathname], rootDiv);
+onNavigate(window.location.hash);
