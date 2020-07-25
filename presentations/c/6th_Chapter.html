@@ -15,7 +15,7 @@
             }
                 </code>
             </pre><p><u>With example:-</u></p><img src="https://www.sitesbay.com/cprogramming/images/for-loop-steps.png"></h4></section><!-- slide 7 content --><section data-background-image="https://cdn.programiz.com/sites/tutorial2program/files/python-for-loop.jpg" data-auto-animate data-background-size="737px" data-background-opacity="0.5" data-transition="convex"><h3><p><u>Flowchart of For Loop</u></p></h3><img src="https://beginnersbook.com/wp-content/uploads/2017/09/for_loop_C.jpg"></section><!-- slide 8 content --><section data-transition="convex"><h4>Let us now write down the simple interest program using for.Compare this program with the one that we wrote using while.</h4><pre>
-            <code>
+            <code data-trim data-noescape>
             #include &lt;stdio.h&gt;
             int main()
             {		
@@ -62,7 +62,7 @@
         }
         </code>
         </pre><p>Here the initialization is done in the declaration statement itself, but still the semicolon before the condition is necessary,</p></section><!-- slide 13 content --><section data-background-image="https://cdn.programiz.com/sites/tutorial2program/files/python-for-loop.jpg" data-auto-animate data-background-size="737px" data-background-opacity="0.5" data-transition="convex"><h2><p>Nesting of Loops</p></h2></section><!-- slide 14 content --><section data-auto-animate data-transition="convex"><h2><p>What is Nesting..?</p></h2><img src="https://image.shutterstock.com/image-vector/empty-nest-branches-leaves-260nw-797078014.jpg"></section><!-- slide 15 Content ---><section data-background-image="https://cdn.programiz.com/sites/tutorial2program/files/python-for-loop.jpg" data-auto-animate data-background-size="737px" data-background-opacity="0.5" data-transition="convex"><p>The way if statements can be nested, similarly while's and for's can also be nested.</p><p>The following program shows how nested loops work.</p><pre>
-        <code>
+        <code data-trim data-noescape>
          #include &lt;stdio.h&gt;
          int main()
           {
@@ -80,7 +80,7 @@
                         
        </code>
         </pre></section><!-- slide 16 Content ---><section data-auto-animate data-transition="convex"><h2><p><u>Multiple Initializations in the for loop</u></p></h2></section><!-- slide 17 Content ---><section data-background-image="https://cdn.programiz.com/sites/tutorial2program/files/python-for-loop.jpg" data-auto-animate data-background-size="737px" data-background-opacity="0.5" data-transition="convex"><ul><li>The initialization expression in the for loop can contain more than one statement separated by a comma.</li><li><u>For Example</u></li><ul><li>for(i=1,j=20; j>=10; j++)</li></ul><li>Multiple incrementations can also be done in a for loop. Similarly, multiple conditions are allowed in the test expression.</li><li>These conditions should be linked together using logical operators && and /or ||.</li></ul></section><!-- slide 17 Content ---><section data-auto-animate data-transition="convex"><h3>The Break Statement</h3></section><!-- slide 18 Content ---><section data-auto-animate data-transition="convex"><ul><li>In some situations, we want to jump out of a loop instantly, without get back to the condition.</li><li>The keyboard break allows us to do this.</li><li>A break is usually associated with an if.</li><li><u>Definition:-</u></li><ul><li>When break is encountered inside any loop, control automatically passes to the first statement after the loop.</li></ul></ul></section><!-- slide 19 content --><section data-auto-animate data-transition="convex"><h4><p><u>Flowchart for Break Statement</u></p></h4><img src="https://cdn.programiz.com/sites/tutorial2program/files/flowchart-break-statement.jpg" width="70%" height="500px"></section><!-- slide 20 content --><section data-auto-animate data-transition="convex"><h3><p><u>Break Statement in while & For</u></p></h3><img src="https://cdn.programiz.com/sites/tutorial2program/files/how-break-statement-works.jpg"></section><!-- slide 20 content --><section data-auto-animate data-transition="convex"><h4><p><u>Example Program for Break Statement</u></p></h4><pre>
-           <code>
+           <code data-trim data-noescape>
             #include &lt;stdio.h&gt;
             int main()
             {
@@ -99,7 +99,7 @@
             }
            </code>
          </pre></section><!-- slide 17 Content ---><section data-auto-animate data-transition="convex"><h3>The Continue Statement</h3></section><!-- slide 18 Content ---><section data-auto-animate data-transition="convex"><ul><li>In some programming situations, we want to take the control to the beginning of the loop, bypassing the statements inside the loop, which have not yet been executed.</li><li>The keyword continue allows us to do this.</li><li>A continue is usually associated with an if.</li><li><u>Definition:-</u></li><ul><li>when continue is encountered inside any loop, control automatically passes to the beginning of the loop.</li></ul></ul></section><!-- slide 19 content --><section data-auto-animate data-transition="convex"><h4><p><u>Flowchart for Continue Statement</u></p></h4><img src="https://cdn.programiz.com/sites/tutorial2program/files/continue-statement-flowchart.jpg" width="70%" height="500px"></section><!-- slide 20 content --><section data-auto-animate data-transition="convex"><h3><p><u>Continue Statement in while & For</u></p></h3><img src="https://cdn.programiz.com/sites/tutorial2program/files/how-continue-statment-works.jpg"></section><!-- slide 21 content --><section data-auto-animate data-transition="convex"><h4><p><u>Example Program for Continue Statement</u></p></h4><pre>
-           <code>
+           <code data-trim data-noescape>
             #include &lt;stdio.h&gt;
             int main()
             {
@@ -117,7 +117,7 @@
             }	
            </code>
          </pre></section><!-- slide 22 content --><section data-auto-animate data-transition="convex"><h3>The do-while Loop</h3></section><!-- slide 23 content --><section data-auto-animate data-transition="convex"><p><u>Definition:-</u></p><ul><li>A do-while loop is similar to while loop, but in this it executes the statements inside the body of do-while before checking the condition.</li><li>On the other hand in while loop, it first checks the condition and then the statements in while loop gets executed.</li><li>So, it is called as exit controlled loop.</li><li>The special feature of a do-while loop is that it executes the body of the loop at least once even if the condition is false.</li></ul></section><!-- slide 24 content --><section data-auto-animate data-transition="convex"><h3><b><u>Synatx of do-while Loop</u></b></h3><img src="http://www.btechsmartclass.com/c_programming/cp_images/do-while-syntax.png"></section><!-- slide 25 content --><section data-auto-animate data-transition="convex"><h3><b><u>Flowchart for do-while Loop</u></b></h3><img src="https://www.completecsharptutorial.com/basics/images/dowhile.jpg"></section><!-- slide 26 content --><section data-auto-animate data-transition="convex"><h4><p><u>Example Program for do-while Loop</u></p></h4><pre>
-           <code>
+           <code data-trim data-noescape>
             #include&lt;stdio.h&gt;
                 int main()
                 {
@@ -131,7 +131,7 @@
                 }
            </code>
            </pre></section><!-- slide 27 content --><section data-auto-animate data-transition="convex"><h3><b><u>Difference Between while & do-while Loop</u></b></h3><img src="https://cdn.shortpixel.ai/client/to_webp,q_glossy,ret_img,w_645/https://masterprograming.com/wp-content/uploads/2019/09/While-and-Do-While-flowchart_structure_loop.png"></section><!-- slide 28 content --><section data-auto-animate data-transition="convex"><h3>The Odd Loop</h3></section><!-- slide 29 content --><section data-auto-animate data-transition="convex"><ul><li>The loops used so far executed the statements within them a finite number of times.</li><li>In real life programming, there are many times comes a situation when we don't know how many times the statements in the loop are to be executed.</li><li>There is comes concept of odd loop.</li><li>Execution of loop an unknown number of times can be done by while for and do-while loops.</li></ul></section><!-- slide 30 content --><section data-auto-animate data-transition="convex"><p><u>This situation can be programmed as shown below:-</u></p><pre>
-            <code>
+            <code data-trim data-noescape>
             # include&lt;stdio.h&gt;
             int main()
             {

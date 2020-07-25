@@ -18,7 +18,6 @@
         </code>
             </pre></section><!-- slide 12 content --><section data-auto-animate data-transition="convex"><ul><li>The program executes all statements 3 times</li><li>The logic for calculating the simple interest is written in these statements and they are enclosed within a pair of braces</li><li>These statements form the ‘body’ of the while loop.</li><li>The parentheses after the while contain a condition.</li></ul></section><!-- slide 13 content --><section data-auto-animate data-transition="convex"><ul><li>So long as this condition remains true, the statements in the body of the while loop keep getting executed repeatedly</li><li>To begin with,the variable count is initialized to 5 and every time the simple interest logic is executed, the value of count is decremented by one</li><li>The variable count is often called either a ‘loop counter’ or an ‘index variable’</li></ul></section><!-- slide 14 content --><section data-auto-animate data-transition="convex"><h3>Tips and Traps</h3><ul><li>The general form of while is as shown below</li><li>Initialize loop counter;</li><li>While(test loop counter using a condition)</li></ul></section><!-- slide 15 content --><section data-auto-animate data-transition="convex"><h3><p><u>Statement Block of the While Loop</u></p><pre>
             <code data-trim data-noescape>
-
                     {
                       do this;
 	                  and this;
@@ -47,16 +46,16 @@
             <code data-trim data-noescape>
             int main()
             {
-               int i=15;
-	            while (i>=10)
+               int i=1;
+	            while (i&lt;=10)
 	            {
 		            printf(“%d\n”,i);
-		            i=i-1;
+		            i=i+1;
 	            }       
 	            return 0;
             }
                 </code>
-            </pre></section><!-- slide 20 content --><section data-auto-animate data-transition="convex"><ul><li>Instead of decreasing a loop counter,we can increement it and still manage to get the body of the loop executed repeatedly.</li><li>It is not necessary that a loop counter must only be an int.it can even be a float.</li><li>Even floating point loop counters can be decremented.once again,the increment and decrement could be by any value,not necessarily</li></ul></section><!-- slide 21 content --><section data-auto-animate data-transition="convex"><p>What will be the output of the following program:</p><pre>
+            </pre></section><!-- slide 20 content --><section data-auto-animate data-transition="convex"><ul><li>Instead of increasing a loop counter,we can decrement it and still manage to get the body of the loop executed repeatedly.</li><li>It is not necessary that a loop counter must only be an int.it can even be a float.</li><li>Even floating point loop counters can be decremented.once again,the increment and decrement could be by any value,not necessarily</li></ul></section><!-- slide 21 content --><section data-auto-animate data-transition="convex"><p>What will be the output of the following program:</p><pre>
             <code data-trim data-noescape>
                 int main()
                 {
@@ -84,56 +83,43 @@
                 }
                 </code>
             </pre><p>This is the most straight-forward way of printing numbers from 10 to 1.</p></section><!-- slide 24 Content ---><section data-auto-animate data-transition="convex"><ul><li>In the previous program instead of giving i=i-1, here we are going to use decrement operator(i=i--).</li><li>Note that the decremet operator -- decrements the value of i by 1, every time the statement i-- gets executed.</li><li>Similarly, to increase the value of a variable by 1, a increment operator ++ is also available.</li><li>However, never use n+++ to increment the value of n by 2, since there doesn’t exist an operator +++ in c.</li></ul></section><!-- slide 25 Content ---><section data-auto-animate data-transition="convex"><pre>
-            <code><script type="text/template">
-
-
-        (c)
-             int main()
-            {
-            int i=1;
-            while (i<=10);
-             {
-                printf(“%d\n”,i);
-                i +=1;
-             }
-            return 0;
-            }
-
-
-            </script>
-            </code>
+            <code data-trim data-noescape>
+    (c)
+         int main()
+        {
+        int i=1;
+        while (i&lt;=10);
+         {
+            printf(“%d\n”,i);
+            i +=1;
+         }
+        return 0;
+        }
+          </code>
             </pre></section><!-- slide 26 Content ---><section data-auto-animate data-transition="convex"><ul><li>Note that += is a compound assignment operator.</li><li>It increments the value of i by 1.</li><li>Similarly, j=j+10 can also be written as j+=10.other compound assignment operators are -=,*=,/= and %=.</li></ul></section><!-- slide 27 Content ---><section data-auto-animate data-transition="convex"><pre>
-            <code>
-            <script type="text/template">
-        
+            <code data-trim data-noescape>
             (d)
                 int main()
                 {
                 int i=0;
-                while ( i++< 10 )
+                while ( i++&lt;10 )
                 {
                 printf(“%d\n”,i);
                 }
                 return0;
                 }
-
-            </script>
             </code>
             </pre></section><!-- slide 28 Content ---><section data-auto-animate data-transition="convex"><ul><li>In the while statement, first the comparison of value of i with 10 is performed, and then the incrementation of i takes place.</li><li>Since the incrementation of i happens after the comparison, here the ++ operator is called a post – incrementation operator.</li><li>When the control reaches printf(), i has already been incremented, hence i must be initialized to 0, not 1.</li></ul></section><!-- slide 29 Content ---><section data-auto-animate data-transition="convex"><pre>
-            <code>
-            <script type="text/template">
-        
+            <code data-trim data-noescape>
             (e)
             int main()
             {
                 int i=0;
-                while ( ++i <=10 )
+                while ( ++i&lt;=10 )
                 {
                     printf(“%d\n”,i);
                 }
                 return 0;
             }
-
-            </script>
             </code>
             </pre></section><!-- slide 30 Content ---><section data-auto-animate data-transition="convex"><ul><li>In the while statement,first incrementation of i takes place, then the comparison of value of i with 10 is performed.</li><li>Since the incrementation of i happens before the comparison, here the ++ operator is called a pre-incrementation operator.</li></ul></section><!-- slide 31 Content ---><section data-auto-animate data-transition="convex"><img src="https://www.itl.cat/pngfile/big/112-1125365_hd-images-photo-pics-wallpaper-pic-for-thank.jpg"></section></div></div>
